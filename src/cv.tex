@@ -1,0 +1,118 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{ebgaramond}
+\usepackage{changepage}
+\usepackage{hyperref}
+
+\newcommand{\CustomSection}[1]{
+\vspace{2.0\baselineskip}
+\noindent \large{\MakeUppercase{#1}}
+\vspace{0.5\baselineskip}
+\hrule
+\vspace{0.8\baselineskip}
+}
+
+\newcommand{\Company}[5]{
+\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcr}
+#2 & \textbf{#1} & #3 \\
+\end{tabular*}
+\noindent{\textit{#4}}
+
+\vspace{1.0\baselineskip}
+
+\begin{adjustwidth}{35pt}{35pt}
+  #5
+\end{adjustwidth}
+
+\vspace{2.0\baselineskip}
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+\huge{\textsc{\MakeUppercase{Andrei Pezopoulos Giordano}}}
+\\
+\large{\textsc{E-mail: \email / \phone: \phoneNumber}}
+\end{center}
+
+\CustomSection{\education}
+
+\noindent{Jan/2008 - \december/2011 - \textbf{UNIVERSIDADE PRESBITERIANA MACKENZIE} - São Paulo, SP}
+\begin{itemize}
+    \item \textit{\bachelor} - \grade: 7.5 of 10.0
+\end{itemize}
+
+\CustomSection{\employment}
+
+\Company{PicPay*}{\february/2022 - \present}{São Paulo, SP}{Staff Software Engineer}{
+\picpayexplain
+
+\begin{itemize}
+\picpaytopics
+\end{itemize}
+
+\noindent - \textbf{\techUsed}: Kotlin, Java, Git, Jenkins, Gradle, Amazon Web
+Services (\mainly \hspace{0.0cm} SQS and Dynamo), MySQL, Kubernetes, Microservices, Docker.
+
+\noindent - \textbf{\mainProjects}: \picpayMainProjects
+
+\vspace{1.0\baselineskip}
+
+\noindent * \picpayBuy
+}
+
+\Company{Guiabolso}{\february/2018 - \february/2022}{São Paulo, SP}{\seniorsw}{
+
+\gbexplain
+
+\begin{itemize}
+\gbtopics
+\end{itemize}
+
+\noindent - \textbf{\techUsed}: Kotlin, Java, Git, Jenkins, Gradle, Amazon Web
+Services (\mainly \hspace{0.0cm} SQS, ECS and Dynamo), MySQL, Microservices, Docker, Robot Framework.
+
+\noindent - \textbf{\mainProjects}: \gbMainProjects
+
+\vspace{1.0\baselineskip}
+
+}
+
+\Company{Software Express Informática Ltda}{\february/2012 – \february/2018}{São Paulo, SP}{\sw}{
+
+\softexpexplain
+
+\begin{itemize}
+\softextopics
+\end{itemize}
+
+\noindent - \textbf{\techUsed}: C, Pascal, Delphi, C++, SCons, Hg (\mercurial),
+Python, Scala, PostgreSQL, Buildbot, Monolith.
+
+\noindent - \textbf{\mainProjects}: \softexpMainProjects
+}
+
+\Company{Software Express Informática Ltda}{\may/2010 – \february/2012}{São Paulo, SP}{\swIntern}{
+
+\begin{itemize}
+\setopics
+\end{itemize}
+
+}
+
+\CustomSection{\relatedActivities}
+\begin{itemize}
+    \item \proatopic
+\end{itemize}
+
+\CustomSection{\languages}
+\begin{itemize}
+    \item \englishLang
+    \item \portugueseLang
+\end{itemize}
+
+\end{document}
